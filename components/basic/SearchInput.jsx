@@ -1,5 +1,10 @@
 const SearchInput = ({selectedPlatformIndex}) => {
+  try{
     const platforms = JSON.parse(localStorage.getItem("platforms"));
+  }catch(e){
+    console.log(e);
+
+  }
     const currentplatform = platforms[selectedPlatformIndex];
   return (
     <div className='p-2'>
