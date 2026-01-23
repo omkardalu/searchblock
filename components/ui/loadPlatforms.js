@@ -1,7 +1,11 @@
 const loadPlatforms = () => {
-    const platforms = [
+  const platforms = [
     { name: "google", link: "https://www.google.co.in/search", paramName: "q" },
-    { name: "flipkart", link: "https://www.flipkart.com/search", paramName: "q" },
+    {
+      name: "flipkart",
+      link: "https://www.flipkart.com/search",
+      paramName: "q",
+    },
     { name: "amazon", link: "https://www.amazon.in/s", paramName: "k" },
     {
       name: "youtube",
@@ -9,13 +13,13 @@ const loadPlatforms = () => {
       paramName: "search_query",
     },
   ];
-  
-  try{
-    localStorage.setItem("platforms", JSON.stringify(platforms));
-  }catch(e) {
+  try {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("platforms", JSON.stringify(platforms));
+    }
+  } catch (e) {
     console.log(e);
   }
-
-}
+};
 
 export default loadPlatforms;
