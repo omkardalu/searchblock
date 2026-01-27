@@ -4,7 +4,7 @@ const PlatformButton = ({name,index, selectedPlatformIndex, setSelectedPlatformI
   }
   
   return (
-    <button target="_blank" onClick={handleClick} className={`p-2 ${selectedPlatformIndex === index && "bg-blue-950"} rounded capitalize cursor-pointer`}>{name}</button>
+    <button target="_blank" onClick={handleClick} className={`p-2 ${selectedPlatformIndex === index && "bg-blue-950"} grow  bg-[#181818] capitalize cursor-pointer`}>{name}</button>
   )
 }
 

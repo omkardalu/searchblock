@@ -17,20 +17,34 @@ const SearchInput = ({ selectedPlatformIndex }) => {
       console.log(e);
     }
   }, [selectedPlatformIndex]);
-
+  const handleSubmit = (e) => {
+    const formObject = new FormData(e.target);
+    if (formObject.get("o")) {
+      e.target.action = currentplatform.link + "/" + formObject.get("o");
+    }
+  };
   if (!currentplatform) {
     return <div className="p-2">Loading...</div>;
   }
 
   return (
-    <div className="p-2">
-      <form target="_blank" action={currentplatform.link}>
+    <div className="w-full">
+      <form
+        onSubmit={handleSubmit}
+        className="flex justify-between py-1 px-2"
+        target="_blank"
+        action={currentplatform.link}
+      >
         <input
-          className="outline-0"
+          className="outline-0 w-full pl-3"
           type="text"
-          name={currentplatform.paramName}
+          placeholder="Search here"
+          name={currentplatform.paramName || "o"}
         />
-        <button className="p-2 bg-gray-900 rounded shadow-2xl" type="submit">
+        <button
+          className="px-3 py-2 m-1 text-black rounded shadow bg-[#C0C0C0]"
+          type="submit"
+        >
           Search
         </button>
       </form>

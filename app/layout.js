@@ -1,5 +1,5 @@
 import "./globals.css";
-import ServiceWorkerRegister from "./ServiceWorkerRegister";
+import ServiceWorkerRegister from "./ServiceWorkerRegister.js";
 
 export const metadata = {
   title: "SearchBlock",

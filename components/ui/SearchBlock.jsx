@@ -9,7 +9,7 @@ const SearchBlock = () => {
   const [selectedPlatformIndex, setSelectedPlatformIndex] = useState(0);
 
   return (
-    <section className="border w-fit mx-auto flex flex-col items-center">
+    <section className="border w-full text-xl border-gray-500 shadow-blue-400 bg-[#303030] mx-auto rounded-2xl overflow-hidden flex flex-col items-center">
       <PlatformsContainer selectedPlatformIndex={selectedPlatformIndex} setSelectedPlatformIndex={setSelectedPlatformIndex} />
       <SearchInput  selectedPlatformIndex={selectedPlatformIndex} setSelectedPlatformIndex={setSelectedPlatformIndex} />
     </section>

@@ -26,7 +26,7 @@ const PlatformsContainer = ({
   });
 
   return (
-    <div className="border border-gray-700 rounded">
+      <div className="border m-1 flex justify-between flex-wrap border-gray-700 rounded-2xl overflow-hidden shadow">
       {platformButtonContainer}
     </div>
   );
