@@ -38,11 +38,12 @@ const SearchInput = ({ selectedPlatformIndex }) => {
         <input
           className="outline-0 w-full pl-3"
           type="text"
+          autoFocus
           placeholder="Search here"
           name={currentplatform.paramName || "o"}
         />
         <button
-          className="px-3 py-2 m-1 text-black rounded shadow bg-[#C0C0C0]"
+          className="px-3 py-2 my-1 text-black cursor-pointer rounded-2xl shadow bg-white"
           type="submit"
         >
           Search
